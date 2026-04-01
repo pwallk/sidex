@@ -1,4 +1,5 @@
 mod commands;
+mod static_server;
 
 use commands::debug::DebugAdapterStore;
 use commands::ext_host::ExtHostProcess;
@@ -178,12 +179,34 @@ pub fn run() {
             let menu = build_menu(app.handle())?;
             app.set_menu(menu)?;
 
-            // Enable devtools in all builds for debugging
+            // In production, serve dist/ files over a local HTTP server
+            // instead of tauri:// protocol for better performance (caching, streaming).
+            if !cfg!(debug_assertions) {
+                let resource_dir = app
+                    .path()
+                    .resource_dir()
+                    .expect("failed to resolve resource dir");
+                let dist_dir = resource_dir.join("dist");
+
+                let server = static_server::StaticFileServer::start(dist_dir)
+                    .expect("failed to start static file server");
+                let url = server.url();
+                log::info!("Static file server started at {}", url);
+
+                // Leak the server so it lives for the entire app lifetime
+                Box::leak(Box::new(server));
+
+                if let Some(window) = app.get_webview_window("main") {
+                    let _ = window.eval(&format!(
+                        "window.location.replace('{}')",
+                        url
+                    ));
+                }
+            }
+
             if let Some(window) = app.get_webview_window("main") {
-                // Allow Cmd+Alt+I to open devtools in production too
                 window.open_devtools();
 
-                // Inject memory diagnostic
                 let _ = window.eval(r#"
                     (function() {
                         var count = 0;
