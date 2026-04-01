@@ -1,0 +1,3610 @@
+[
+  {
+    "extensionPath": "bat",
+    "packageJSON": {
+      "name": "bat",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "^1.52.0"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin mmims/language-batchfile grammars/batchfile.cson ./syntaxes/batchfile.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "bat",
+            "extensions": [
+              ".bat",
+              ".cmd"
+            ],
+            "aliases": [
+              "Batch",
+              "bat"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "bat",
+            "scopeName": "source.batchfile",
+            "path": "./syntaxes/batchfile.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "bat",
+            "path": "./snippets/batchfile.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Windows Bat Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in Windows batch files."
+    }
+  },
+  {
+    "extensionPath": "clojure",
+    "packageJSON": {
+      "name": "clojure",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin atom/language-clojure grammars/clojure.cson ./syntaxes/clojure.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "clojure",
+            "aliases": [
+              "Clojure",
+              "clojure"
+            ],
+            "extensions": [
+              ".clj",
+              ".cljs",
+              ".cljc",
+              ".cljx",
+              ".clojure",
+              ".edn"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "clojure",
+            "scopeName": "source.clojure",
+            "path": "./syntaxes/clojure.tmLanguage.json"
+          }
+        ],
+        "configurationDefaults": {
+          "[clojure]": {
+            "diffEditor.ignoreTrimWhitespace": false
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Clojure Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Clojure files."
+    }
+  },
+  {
+    "extensionPath": "coffeescript",
+    "packageJSON": {
+      "name": "coffeescript",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin atom/language-coffee-script grammars/coffeescript.cson ./syntaxes/coffeescript.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "coffeescript",
+            "extensions": [
+              ".coffee",
+              ".cson",
+              ".iced"
+            ],
+            "aliases": [
+              "CoffeeScript",
+              "coffeescript",
+              "coffee"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "coffeescript",
+            "scopeName": "source.coffee",
+            "path": "./syntaxes/coffeescript.tmLanguage.json"
+          }
+        ],
+        "breakpoints": [
+          {
+            "language": "coffeescript"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "coffeescript",
+            "path": "./snippets/coffeescript.code-snippets"
+          }
+        ],
+        "configurationDefaults": {
+          "[coffeescript]": {
+            "diffEditor.ignoreTrimWhitespace": false,
+            "editor.defaultColorDecorators": "never"
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "CoffeeScript Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in CoffeeScript files."
+    }
+  },
+  {
+    "extensionPath": "cpp",
+    "packageJSON": {
+      "name": "cpp",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammars.js"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "c",
+            "extensions": [
+              ".c",
+              ".i"
+            ],
+            "aliases": [
+              "C",
+              "c"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "cpp",
+            "extensions": [
+              ".cpp",
+              ".cppm",
+              ".cc",
+              ".ccm",
+              ".cxx",
+              ".cxxm",
+              ".c++",
+              ".c++m",
+              ".hpp",
+              ".hh",
+              ".hxx",
+              ".h++",
+              ".h",
+              ".ii",
+              ".ino",
+              ".inl",
+              ".ipp",
+              ".ixx",
+              ".tpp",
+              ".txx",
+              ".hpp.in",
+              ".h.in"
+            ],
+            "aliases": [
+              "C++",
+              "Cpp",
+              "cpp"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "cuda-cpp",
+            "extensions": [
+              ".cu",
+              ".cuh"
+            ],
+            "aliases": [
+              "CUDA C++"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "c",
+            "scopeName": "source.c",
+            "path": "./syntaxes/c.tmLanguage.json"
+          },
+          {
+            "language": "cpp",
+            "scopeName": "source.cpp.embedded.macro",
+            "path": "./syntaxes/cpp.embedded.macro.tmLanguage.json"
+          },
+          {
+            "language": "cpp",
+            "scopeName": "source.cpp",
+            "path": "./syntaxes/cpp.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.c.platform",
+            "path": "./syntaxes/platform.tmLanguage.json"
+          },
+          {
+            "language": "cuda-cpp",
+            "scopeName": "source.cuda-cpp",
+            "path": "./syntaxes/cuda-cpp.tmLanguage.json"
+          }
+        ],
+        "problemPatterns": [
+          {
+            "name": "nvcc-location",
+            "regexp": "^(.*)\\((\\d+)\\):\\s+(warning|error):\\s+(.*)",
+            "kind": "location",
+            "file": 1,
+            "location": 2,
+            "severity": 3,
+            "message": 4
+          }
+        ],
+        "problemMatchers": [
+          {
+            "name": "nvcc",
+            "owner": "cuda-cpp",
+            "fileLocation": [
+              "relative",
+              "${workspaceFolder}"
+            ],
+            "pattern": "$nvcc-location"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "c",
+            "path": "./snippets/c.code-snippets"
+          },
+          {
+            "language": "cpp",
+            "path": "./snippets/cpp.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "C/C++ Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in C/C++ files."
+    }
+  },
+  {
+    "extensionPath": "csharp",
+    "packageJSON": {
+      "name": "csharp",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin dotnet/csharp-tmLanguage grammars/csharp.tmLanguage ./syntaxes/csharp.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "configurationDefaults": {
+          "[csharp]": {
+            "editor.maxTokenizationLineLength": 2500
+          }
+        },
+        "languages": [
+          {
+            "id": "csharp",
+            "extensions": [
+              ".cs",
+              ".csx",
+              ".cake"
+            ],
+            "aliases": [
+              "C#",
+              "csharp"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "csharp",
+            "scopeName": "source.cs",
+            "path": "./syntaxes/csharp.tmLanguage.json",
+            "tokenTypes": {
+              "meta.interpolation": "other"
+            },
+            "unbalancedBracketScopes": [
+              "keyword.operator.relational.cs",
+              "keyword.operator.arrow.cs",
+              "punctuation.accessor.pointer.cs",
+              "keyword.operator.bitwise.shift.cs",
+              "keyword.operator.assignment.compound.bitwise.cs"
+            ]
+          }
+        ],
+        "snippets": [
+          {
+            "language": "csharp",
+            "path": "./snippets/csharp.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "C# Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in C# files."
+    }
+  },
+  {
+    "extensionPath": "css",
+    "packageJSON": {
+      "name": "css",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin microsoft/vscode-css grammars/css.cson ./syntaxes/css.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "css",
+            "aliases": [
+              "CSS",
+              "css"
+            ],
+            "extensions": [
+              ".css"
+            ],
+            "mimetypes": [
+              "text/css"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "css",
+            "scopeName": "source.css",
+            "path": "./syntaxes/css.tmLanguage.json",
+            "tokenTypes": {
+              "meta.function.url string.quoted": "other"
+            }
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "CSS Language Basics",
+      "description": "Provides syntax highlighting and bracket matching for CSS, LESS and SCSS files."
+    }
+  },
+  {
+    "extensionPath": "dart",
+    "packageJSON": {
+      "name": "dart",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin dart-lang/dart-syntax-highlight grammars/dart.json ./syntaxes/dart.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "dart",
+            "extensions": [
+              ".dart"
+            ],
+            "aliases": [
+              "Dart"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "dart",
+            "scopeName": "source.dart",
+            "path": "./syntaxes/dart.tmLanguage.json"
+          }
+        ]
+      }
+    },
+    "packageNLS": {
+      "displayName": "Dart Language Basics",
+      "description": "Provides syntax highlighting & bracket matching in Dart files."
+    }
+  },
+  {
+    "extensionPath": "diff",
+    "packageJSON": {
+      "name": "diff",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/diff.tmbundle Syntaxes/Diff.plist ./syntaxes/diff.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "diff",
+            "aliases": [
+              "Diff",
+              "diff"
+            ],
+            "extensions": [
+              ".diff",
+              ".patch",
+              ".rej"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "diff",
+            "scopeName": "source.diff",
+            "path": "./syntaxes/diff.tmLanguage.json"
+          }
+        ]
+      }
+    },
+    "packageNLS": {
+      "displayName": "Diff Language Basics",
+      "description": "Provides syntax highlighting & bracket matching in Diff files."
+    }
+  },
+  {
+    "extensionPath": "docker",
+    "packageJSON": {
+      "name": "docker",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {},
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "dockerfile",
+            "extensions": [
+              ".dockerfile",
+              ".containerfile"
+            ],
+            "filenames": [
+              "Dockerfile",
+              "Containerfile"
+            ],
+            "filenamePatterns": [
+              "Dockerfile.*",
+              "Containerfile.*"
+            ],
+            "aliases": [
+              "Docker",
+              "Dockerfile",
+              "Containerfile"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "dockerfile",
+            "scopeName": "source.dockerfile",
+            "path": "./syntaxes/docker.tmLanguage.json"
+          }
+        ],
+        "configurationDefaults": {
+          "[dockerfile]": {
+            "editor.quickSuggestions": {
+              "strings": true
+            }
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Docker Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Docker files."
+    }
+  },
+  {
+    "extensionPath": "dotenv",
+    "packageJSON": {
+      "name": "dotenv",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin dotenv-org/dotenv-vscode syntaxes/dotenv.tmLanguage.json ./syntaxes/dotenv.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "dotenv",
+            "extensions": [
+              ".env"
+            ],
+            "filenames": [
+              ".env",
+              ".flaskenv",
+              "user-dirs.dirs"
+            ],
+            "filenamePatterns": [
+              ".env.*"
+            ],
+            "aliases": [
+              "Dotenv"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "dotenv",
+            "scopeName": "source.dotenv",
+            "path": "./syntaxes/dotenv.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Dotenv Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in dotenv files."
+    }
+  },
+  {
+    "extensionPath": "fsharp",
+    "packageJSON": {
+      "name": "fsharp",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin ionide/ionide-fsgrammar grammars/fsharp.json ./syntaxes/fsharp.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "fsharp",
+            "extensions": [
+              ".fs",
+              ".fsi",
+              ".fsx",
+              ".fsscript"
+            ],
+            "aliases": [
+              "F#",
+              "FSharp",
+              "fsharp"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "fsharp",
+            "scopeName": "source.fsharp",
+            "path": "./syntaxes/fsharp.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "fsharp",
+            "path": "./snippets/fsharp.code-snippets"
+          }
+        ],
+        "configurationDefaults": {
+          "[fsharp]": {
+            "diffEditor.ignoreTrimWhitespace": false
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "F# Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in F# files."
+    }
+  },
+  {
+    "extensionPath": "git-base",
+    "packageJSON": {
+      "name": "git-base",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "categories": [
+        "Other"
+      ],
+      "activationEvents": [
+        "*"
+      ],
+      "main": "./out/extension.js",
+      "browser": "./dist/browser/extension.js",
+      "icon": "resources/icons/git.png",
+      "scripts": {
+        "compile": "gulp compile-extension:git-base",
+        "watch": "gulp watch-extension:git-base",
+        "update-grammar": "node ./build/update-grammars.js"
+      },
+      "capabilities": {
+        "virtualWorkspaces": true,
+        "untrustedWorkspaces": {
+          "supported": true
+        }
+      },
+      "contributes": {
+        "commands": [
+          {
+            "command": "git-base.api.getRemoteSources",
+            "title": "%command.api.getRemoteSources%",
+            "category": "Git Base API"
+          }
+        ],
+        "menus": {
+          "commandPalette": [
+            {
+              "command": "git-base.api.getRemoteSources",
+              "when": "false"
+            }
+          ]
+        },
+        "languages": [
+          {
+            "id": "git-commit",
+            "aliases": [
+              "Git Commit Message",
+              "git-commit"
+            ],
+            "filenames": [
+              "COMMIT_EDITMSG",
+              "MERGE_MSG"
+            ],
+            "configuration": "./languages/git-commit.language-configuration.json"
+          },
+          {
+            "id": "git-rebase",
+            "aliases": [
+              "Git Rebase Message",
+              "git-rebase"
+            ],
+            "filenames": [
+              "git-rebase-todo"
+            ],
+            "filenamePatterns": [
+              "**/rebase-merge/done"
+            ],
+            "configuration": "./languages/git-rebase.language-configuration.json"
+          },
+          {
+            "id": "ignore",
+            "aliases": [
+              "Ignore",
+              "ignore"
+            ],
+            "extensions": [
+              ".gitignore_global",
+              ".gitignore",
+              ".git-blame-ignore-revs"
+            ],
+            "configuration": "./languages/ignore.language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "git-commit",
+            "scopeName": "text.git-commit",
+            "path": "./syntaxes/git-commit.tmLanguage.json"
+          },
+          {
+            "language": "git-rebase",
+            "scopeName": "text.git-rebase",
+            "path": "./syntaxes/git-rebase.tmLanguage.json"
+          },
+          {
+            "language": "ignore",
+            "scopeName": "source.ignore",
+            "path": "./syntaxes/ignore.tmLanguage.json"
+          }
+        ]
+      },
+      "devDependencies": {
+        "@types/node": "22.x"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Git Base",
+      "description": "Git static contributions and pickers.",
+      "command.api.getRemoteSources": "Get Remote Sources"
+    }
+  },
+  {
+    "extensionPath": "go",
+    "packageJSON": {
+      "name": "go",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin worlpaker/go-syntax syntaxes/go.tmLanguage.json ./syntaxes/go.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "go",
+            "extensions": [
+              ".go"
+            ],
+            "aliases": [
+              "Go"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "go",
+            "scopeName": "source.go",
+            "path": "./syntaxes/go.tmLanguage.json"
+          }
+        ],
+        "configurationDefaults": {
+          "[go]": {
+            "editor.insertSpaces": false
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Go Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Go files."
+    }
+  },
+  {
+    "extensionPath": "groovy",
+    "packageJSON": {
+      "name": "groovy",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/groovy.tmbundle Syntaxes/Groovy.tmLanguage ./syntaxes/groovy.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "groovy",
+            "aliases": [
+              "Groovy",
+              "groovy"
+            ],
+            "extensions": [
+              ".groovy",
+              ".gvy",
+              ".gradle",
+              ".jenkinsfile",
+              ".nf"
+            ],
+            "filenames": [
+              "Jenkinsfile"
+            ],
+            "filenamePatterns": [
+              "Jenkinsfile*"
+            ],
+            "firstLine": "^#!.*\\bgroovy\\b",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "groovy",
+            "scopeName": "source.groovy",
+            "path": "./syntaxes/groovy.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "groovy",
+            "path": "./snippets/groovy.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Groovy Language Basics",
+      "description": "Provides snippets, syntax highlighting and bracket matching in Groovy files."
+    }
+  },
+  {
+    "extensionPath": "handlebars",
+    "packageJSON": {
+      "name": "handlebars",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin daaain/Handlebars grammars/Handlebars.json ./syntaxes/Handlebars.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "extensionKind": [
+        "ui",
+        "workspace"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "handlebars",
+            "extensions": [
+              ".handlebars",
+              ".hbs",
+              ".hjs"
+            ],
+            "aliases": [
+              "Handlebars",
+              "handlebars"
+            ],
+            "mimetypes": [
+              "text/x-handlebars-template"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "handlebars",
+            "scopeName": "text.html.handlebars",
+            "path": "./syntaxes/Handlebars.tmLanguage.json"
+          }
+        ],
+        "htmlLanguageParticipants": [
+          {
+            "languageId": "handlebars",
+            "autoInsert": true
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Handlebars Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Handlebars files."
+    }
+  },
+  {
+    "extensionPath": "hlsl",
+    "packageJSON": {
+      "name": "hlsl",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin tgjones/shaders-tmLanguage grammars/hlsl.json ./syntaxes/hlsl.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "hlsl",
+            "extensions": [
+              ".hlsl",
+              ".hlsli",
+              ".fx",
+              ".fxh",
+              ".vsh",
+              ".psh",
+              ".cginc",
+              ".compute"
+            ],
+            "aliases": [
+              "HLSL",
+              "hlsl"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "hlsl",
+            "path": "./syntaxes/hlsl.tmLanguage.json",
+            "scopeName": "source.hlsl"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "HLSL Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in HLSL files."
+    }
+  },
+  {
+    "extensionPath": "html",
+    "packageJSON": {
+      "name": "html",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "html",
+            "extensions": [
+              ".html",
+              ".htm",
+              ".shtml",
+              ".xhtml",
+              ".xht",
+              ".mdoc",
+              ".jsp",
+              ".asp",
+              ".aspx",
+              ".jshtm",
+              ".volt",
+              ".ejs",
+              ".rhtml"
+            ],
+            "aliases": [
+              "HTML",
+              "htm",
+              "html",
+              "xhtml"
+            ],
+            "mimetypes": [
+              "text/html",
+              "text/x-jshtm",
+              "text/template",
+              "text/ng-template",
+              "application/xhtml+xml"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "scopeName": "text.html.basic",
+            "path": "./syntaxes/html.tmLanguage.json",
+            "embeddedLanguages": {
+              "text.html": "html",
+              "source.css": "css",
+              "source.js": "javascript",
+              "source.python": "python",
+              "source.smarty": "smarty"
+            },
+            "tokenTypes": {
+              "meta.tag string.quoted": "other"
+            }
+          },
+          {
+            "language": "html",
+            "scopeName": "text.html.derivative",
+            "path": "./syntaxes/html-derivative.tmLanguage.json",
+            "embeddedLanguages": {
+              "text.html": "html",
+              "source.css": "css",
+              "source.js": "javascript",
+              "source.python": "python",
+              "source.smarty": "smarty"
+            },
+            "tokenTypes": {
+              "meta.tag string.quoted": "other"
+            }
+          }
+        ],
+        "snippets": [
+          {
+            "language": "html",
+            "path": "./snippets/html.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "HTML Language Basics",
+      "description": "Provides syntax highlighting, bracket matching & snippets in HTML files."
+    }
+  },
+  {
+    "extensionPath": "ini",
+    "packageJSON": {
+      "name": "ini",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "private": true,
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/ini.tmbundle Syntaxes/Ini.plist ./syntaxes/ini.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "ini",
+            "extensions": [
+              ".ini"
+            ],
+            "aliases": [
+              "Ini",
+              "ini"
+            ],
+            "configuration": "./ini.language-configuration.json"
+          },
+          {
+            "id": "properties",
+            "extensions": [
+              ".conf",
+              ".properties",
+              ".cfg",
+              ".directory",
+              ".gitattributes",
+              ".gitconfig",
+              ".gitmodules",
+              ".editorconfig",
+              ".repo"
+            ],
+            "filenames": [
+              "gitconfig"
+            ],
+            "filenamePatterns": [
+              "**/.config/git/config",
+              "**/.git/config"
+            ],
+            "aliases": [
+              "Properties",
+              "properties"
+            ],
+            "configuration": "./properties.language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "ini",
+            "scopeName": "source.ini",
+            "path": "./syntaxes/ini.tmLanguage.json"
+          },
+          {
+            "language": "properties",
+            "scopeName": "source.ini",
+            "path": "./syntaxes/ini.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Ini Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Ini files."
+    }
+  },
+  {
+    "extensionPath": "java",
+    "packageJSON": {
+      "name": "java",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin redhat-developer/vscode-java language-support/java/java.tmLanguage.json ./syntaxes/java.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "java",
+            "extensions": [
+              ".java",
+              ".jav"
+            ],
+            "aliases": [
+              "Java",
+              "java"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "java",
+            "scopeName": "source.java",
+            "path": "./syntaxes/java.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "java",
+            "path": "./snippets/java.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Java Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in Java files."
+    }
+  },
+  {
+    "extensionPath": "javascript",
+    "packageJSON": {
+      "name": "javascript",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "configurationDefaults": {
+          "[javascript]": {
+            "editor.maxTokenizationLineLength": 2500
+          }
+        },
+        "languages": [
+          {
+            "id": "javascriptreact",
+            "aliases": [
+              "JavaScript JSX",
+              "JavaScript React",
+              "jsx"
+            ],
+            "extensions": [
+              ".jsx"
+            ],
+            "configuration": "./javascript-language-configuration.json"
+          },
+          {
+            "id": "javascript",
+            "aliases": [
+              "JavaScript",
+              "javascript",
+              "js"
+            ],
+            "extensions": [
+              ".js",
+              ".es6",
+              ".mjs",
+              ".cjs",
+              ".pac"
+            ],
+            "filenames": [
+              "jakefile"
+            ],
+            "firstLine": "^#!.*\\bnode",
+            "mimetypes": [
+              "text/javascript"
+            ],
+            "configuration": "./javascript-language-configuration.json"
+          },
+          {
+            "id": "jsx-tags",
+            "aliases": [],
+            "configuration": "./tags-language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "javascriptreact",
+            "scopeName": "source.js.jsx",
+            "path": "./syntaxes/JavaScriptReact.tmLanguage.json",
+            "embeddedLanguages": {
+              "meta.tag.js": "jsx-tags",
+              "meta.tag.without-attributes.js": "jsx-tags",
+              "meta.tag.attributes.js.jsx": "javascriptreact",
+              "meta.embedded.expression.js": "javascriptreact"
+            },
+            "tokenTypes": {
+              "punctuation.definition.template-expression": "other",
+              "entity.name.type.instance.jsdoc": "other",
+              "entity.name.function.tagged-template": "other",
+              "meta.import string.quoted": "other",
+              "variable.other.jsdoc": "other"
+            }
+          },
+          {
+            "language": "javascript",
+            "scopeName": "source.js",
+            "path": "./syntaxes/JavaScript.tmLanguage.json",
+            "embeddedLanguages": {
+              "meta.tag.js": "jsx-tags",
+              "meta.tag.without-attributes.js": "jsx-tags",
+              "meta.tag.attributes.js": "javascript",
+              "meta.embedded.expression.js": "javascript"
+            },
+            "tokenTypes": {
+              "punctuation.definition.template-expression": "other",
+              "entity.name.type.instance.jsdoc": "other",
+              "entity.name.function.tagged-template": "other",
+              "meta.import string.quoted": "other",
+              "variable.other.jsdoc": "other"
+            }
+          },
+          {
+            "scopeName": "source.js.regexp",
+            "path": "./syntaxes/Regular Expressions (JavaScript).tmLanguage"
+          }
+        ],
+        "semanticTokenScopes": [
+          {
+            "language": "javascript",
+            "scopes": {
+              "property": [
+                "variable.other.property.js"
+              ],
+              "property.readonly": [
+                "variable.other.constant.property.js"
+              ],
+              "variable": [
+                "variable.other.readwrite.js"
+              ],
+              "variable.readonly": [
+                "variable.other.constant.object.js"
+              ],
+              "function": [
+                "entity.name.function.js"
+              ],
+              "namespace": [
+                "entity.name.type.module.js"
+              ],
+              "variable.defaultLibrary": [
+                "support.variable.js"
+              ],
+              "function.defaultLibrary": [
+                "support.function.js"
+              ]
+            }
+          },
+          {
+            "language": "javascriptreact",
+            "scopes": {
+              "property": [
+                "variable.other.property.jsx"
+              ],
+              "property.readonly": [
+                "variable.other.constant.property.jsx"
+              ],
+              "variable": [
+                "variable.other.readwrite.jsx"
+              ],
+              "variable.readonly": [
+                "variable.other.constant.object.jsx"
+              ],
+              "function": [
+                "entity.name.function.jsx"
+              ],
+              "namespace": [
+                "entity.name.type.module.jsx"
+              ],
+              "variable.defaultLibrary": [
+                "support.variable.js"
+              ],
+              "function.defaultLibrary": [
+                "support.function.js"
+              ]
+            }
+          }
+        ],
+        "snippets": [
+          {
+            "language": "javascript",
+            "path": "./snippets/javascript.code-snippets"
+          },
+          {
+            "language": "javascriptreact",
+            "path": "./snippets/javascript.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "JavaScript Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in JavaScript files."
+    }
+  },
+  {
+    "extensionPath": "json",
+    "packageJSON": {
+      "name": "json",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammars.js"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "json",
+            "aliases": [
+              "JSON",
+              "json"
+            ],
+            "extensions": [
+              ".json",
+              ".bowerrc",
+              ".jscsrc",
+              ".webmanifest",
+              ".js.map",
+              ".css.map",
+              ".ts.map",
+              ".har",
+              ".jslintrc",
+              ".jsonld",
+              ".geojson",
+              ".ipynb",
+              ".vuerc"
+            ],
+            "filenames": [
+              "composer.lock",
+              ".watchmanconfig"
+            ],
+            "mimetypes": [
+              "application/json",
+              "application/manifest+json"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "jsonc",
+            "aliases": [
+              "JSON with Comments"
+            ],
+            "extensions": [
+              ".jsonc",
+              ".eslintrc",
+              ".eslintrc.json",
+              ".jsfmtrc",
+              ".jshintrc",
+              ".swcrc",
+              ".hintrc",
+              ".babelrc",
+              ".toolset.jsonc"
+            ],
+            "filenames": [
+              "babel.config.json",
+              "bun.lock",
+              ".babelrc.json",
+              ".ember-cli",
+              "typedoc.json"
+            ],
+            "filenamePatterns": [
+              "**/.github/hooks/*.json"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "jsonl",
+            "aliases": [
+              "JSON Lines"
+            ],
+            "extensions": [
+              ".jsonl",
+              ".ndjson"
+            ],
+            "filenames": [],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "snippets",
+            "aliases": [
+              "Code Snippets"
+            ],
+            "extensions": [
+              ".code-snippets"
+            ],
+            "filenamePatterns": [
+              "**/User/snippets/*.json",
+              "**/User/profiles/*/snippets/*.json",
+              "**/snippets*.json"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "json",
+            "scopeName": "source.json",
+            "path": "./syntaxes/JSON.tmLanguage.json"
+          },
+          {
+            "language": "jsonc",
+            "scopeName": "source.json.comments",
+            "path": "./syntaxes/JSONC.tmLanguage.json"
+          },
+          {
+            "language": "jsonl",
+            "scopeName": "source.json.lines",
+            "path": "./syntaxes/JSONL.tmLanguage.json"
+          },
+          {
+            "language": "snippets",
+            "scopeName": "source.json.comments.snippets",
+            "path": "./syntaxes/snippets.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "JSON Language Basics",
+      "description": "Provides syntax highlighting & bracket matching in JSON files."
+    }
+  },
+  {
+    "extensionPath": "julia",
+    "packageJSON": {
+      "name": "julia",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin JuliaEditorSupport/atom-language-julia variants/julia_vscode.json ./syntaxes/julia.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "julia",
+            "aliases": [
+              "Julia",
+              "julia"
+            ],
+            "extensions": [
+              ".jl"
+            ],
+            "firstLine": "^#!\\s*/.*\\bjulia[0-9.-]*\\b",
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "juliamarkdown",
+            "aliases": [
+              "Julia Markdown",
+              "juliamarkdown"
+            ],
+            "extensions": [
+              ".jmd"
+            ]
+          }
+        ],
+        "grammars": [
+          {
+            "language": "julia",
+            "scopeName": "source.julia",
+            "path": "./syntaxes/julia.tmLanguage.json",
+            "embeddedLanguages": {
+              "meta.embedded.inline.cpp": "cpp",
+              "meta.embedded.inline.javascript": "javascript",
+              "meta.embedded.inline.python": "python",
+              "meta.embedded.inline.r": "r",
+              "meta.embedded.inline.sql": "sql"
+            }
+          }
+        ],
+        "configurationDefaults": {
+          "[julia]": {
+            "editor.defaultColorDecorators": "never"
+          }
+        }
+      }
+    },
+    "packageNLS": {
+      "displayName": "Julia Language Basics",
+      "description": "Provides syntax highlighting & bracket matching in Julia files."
+    }
+  },
+  {
+    "extensionPath": "less",
+    "packageJSON": {
+      "name": "less",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.js"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "less",
+            "aliases": [
+              "Less",
+              "less"
+            ],
+            "extensions": [
+              ".less"
+            ],
+            "mimetypes": [
+              "text/x-less",
+              "text/less"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "less",
+            "scopeName": "source.css.less",
+            "path": "./syntaxes/less.tmLanguage.json"
+          }
+        ],
+        "problemMatchers": [
+          {
+            "name": "lessc",
+            "label": "Lessc compiler",
+            "owner": "lessc",
+            "source": "less",
+            "fileLocation": "absolute",
+            "pattern": {
+              "regexp": "(.*)\\sin\\s(.*)\\son line\\s(\\d+),\\scolumn\\s(\\d+)",
+              "message": 1,
+              "file": 2,
+              "line": 3,
+              "column": 4
+            }
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Less Language Basics",
+      "description": "Provides syntax highlighting, bracket matching and folding in Less files."
+    }
+  },
+  {
+    "extensionPath": "log",
+    "packageJSON": {
+      "name": "log",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin emilast/vscode-logfile-highlighter syntaxes/log.tmLanguage ./syntaxes/log.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "log",
+            "extensions": [
+              ".log",
+              "*.log.?"
+            ],
+            "aliases": [
+              "Log"
+            ]
+          }
+        ],
+        "grammars": [
+          {
+            "language": "log",
+            "scopeName": "text.log",
+            "path": "./syntaxes/log.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Log",
+      "description": "Provides syntax highlighting for files with .log extension."
+    }
+  },
+  {
+    "extensionPath": "lua",
+    "packageJSON": {
+      "name": "lua",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin sumneko/lua.tmbundle Syntaxes/Lua.plist ./syntaxes/lua.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "lua",
+            "extensions": [
+              ".lua"
+            ],
+            "aliases": [
+              "Lua",
+              "lua"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "lua",
+            "scopeName": "source.lua",
+            "path": "./syntaxes/lua.tmLanguage.json",
+            "tokenTypes": {
+              "comment.line.double-dash.doc.lua": "other"
+            }
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Lua Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Lua files."
+    }
+  },
+  {
+    "extensionPath": "make",
+    "packageJSON": {
+      "name": "make",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin fadeevab/make.tmbundle Syntaxes/Makefile.plist ./syntaxes/make.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "makefile",
+            "aliases": [
+              "Makefile",
+              "makefile"
+            ],
+            "extensions": [
+              ".mak",
+              ".mk"
+            ],
+            "filenames": [
+              "Makefile",
+              "makefile",
+              "GNUmakefile",
+              "OCamlMakefile"
+            ],
+            "firstLine": "^#!\\s*/usr/bin/make",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "makefile",
+            "scopeName": "source.makefile",
+            "path": "./syntaxes/make.tmLanguage.json",
+            "tokenTypes": {
+              "string.interpolated": "other"
+            }
+          }
+        ],
+        "configurationDefaults": {
+          "[makefile]": {
+            "editor.insertSpaces": false
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Make Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Make files."
+    }
+  },
+  {
+    "extensionPath": "markdown-basics",
+    "packageJSON": {
+      "name": "markdown",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "^1.20.0"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "markdown",
+            "aliases": [
+              "Markdown",
+              "markdown"
+            ],
+            "extensions": [
+              ".md",
+              ".mkd",
+              ".mkdn",
+              ".mdwn",
+              ".mdown",
+              ".markdown",
+              ".markdn",
+              ".mdtxt",
+              ".mdtext",
+              ".litcoffee",
+              ".ron",
+              ".ronn",
+              ".workbook"
+            ],
+            "filenamePatterns": [
+              "**/.cursor/**/*.mdc"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "markdown",
+            "scopeName": "text.html.markdown",
+            "path": "./syntaxes/markdown.tmLanguage.json",
+            "embeddedLanguages": {
+              "meta.embedded.block.html": "html",
+              "source.js": "javascript",
+              "source.css": "css",
+              "meta.embedded.block.frontmatter": "yaml",
+              "meta.embedded.block.css": "css",
+              "meta.embedded.block.ini": "ini",
+              "meta.embedded.block.java": "java",
+              "meta.embedded.block.lua": "lua",
+              "meta.embedded.block.makefile": "makefile",
+              "meta.embedded.block.perl": "perl",
+              "meta.embedded.block.r": "r",
+              "meta.embedded.block.ruby": "ruby",
+              "meta.embedded.block.php": "php",
+              "meta.embedded.block.sql": "sql",
+              "meta.embedded.block.vs_net": "vs_net",
+              "meta.embedded.block.xml": "xml",
+              "meta.embedded.block.xsl": "xsl",
+              "meta.embedded.block.yaml": "yaml",
+              "meta.embedded.block.dosbatch": "dosbatch",
+              "meta.embedded.block.clojure": "clojure",
+              "meta.embedded.block.coffee": "coffee",
+              "meta.embedded.block.c": "c",
+              "meta.embedded.block.cpp": "cpp",
+              "meta.embedded.block.diff": "diff",
+              "meta.embedded.block.dockerfile": "dockerfile",
+              "meta.embedded.block.go": "go",
+              "meta.embedded.block.groovy": "groovy",
+              "meta.embedded.block.pug": "jade",
+              "meta.embedded.block.ignore": "ignore",
+              "meta.embedded.block.javascript": "javascript",
+              "meta.embedded.block.json": "json",
+              "meta.embedded.block.jsonc": "jsonc",
+              "meta.embedded.block.jsonl": "jsonl",
+              "meta.embedded.block.latex": "latex",
+              "meta.embedded.block.less": "less",
+              "meta.embedded.block.objc": "objc",
+              "meta.embedded.block.scss": "scss",
+              "meta.embedded.block.perl6": "perl6",
+              "meta.embedded.block.powershell": "powershell",
+              "meta.embedded.block.python": "python",
+              "meta.embedded.block.restructuredtext": "restructuredtext",
+              "meta.embedded.block.rust": "rust",
+              "meta.embedded.block.scala": "scala",
+              "meta.embedded.block.shellscript": "shellscript",
+              "meta.embedded.block.typescript": "typescript",
+              "meta.embedded.block.typescriptreact": "typescriptreact",
+              "meta.embedded.block.csharp": "csharp",
+              "meta.embedded.block.fsharp": "fsharp"
+            },
+            "unbalancedBracketScopes": [
+              "markup.underline.link.markdown",
+              "punctuation.definition.list.begin.markdown"
+            ]
+          }
+        ],
+        "snippets": [
+          {
+            "language": "markdown",
+            "path": "./snippets/markdown.code-snippets"
+          }
+        ],
+        "configurationDefaults": {
+          "[markdown]": {
+            "editor.unicodeHighlight.ambiguousCharacters": false,
+            "editor.unicodeHighlight.invisibleCharacters": false,
+            "diffEditor.ignoreTrimWhitespace": false
+          }
+        }
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin microsoft/vscode-markdown-tm-grammar syntaxes/markdown.tmLanguage ./syntaxes/markdown.tmLanguage.json"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Markdown Language Basics",
+      "description": "Provides snippets and syntax highlighting for Markdown."
+    }
+  },
+  {
+    "extensionPath": "objective-c",
+    "packageJSON": {
+      "name": "objective-c",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammars.js"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "objective-c",
+            "extensions": [
+              ".m"
+            ],
+            "aliases": [
+              "Objective-C"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "objective-cpp",
+            "extensions": [
+              ".mm"
+            ],
+            "aliases": [
+              "Objective-C++"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "objective-c",
+            "scopeName": "source.objc",
+            "path": "./syntaxes/objective-c.tmLanguage.json"
+          },
+          {
+            "language": "objective-cpp",
+            "scopeName": "source.objcpp",
+            "path": "./syntaxes/objective-c++.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Objective-C Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Objective-C files."
+    }
+  },
+  {
+    "extensionPath": "perl",
+    "packageJSON": {
+      "name": "perl",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/perl.tmbundle Syntaxes/Perl.plist ./syntaxes/perl.tmLanguage.json Syntaxes/Perl%206.tmLanguage ./syntaxes/perl6.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "perl",
+            "aliases": [
+              "Perl",
+              "perl"
+            ],
+            "extensions": [
+              ".pl",
+              ".pm",
+              ".pod",
+              ".t",
+              ".PL",
+              ".psgi"
+            ],
+            "firstLine": "^#!.*\\bperl\\b",
+            "configuration": "./perl.language-configuration.json"
+          },
+          {
+            "id": "raku",
+            "aliases": [
+              "Raku",
+              "Perl6",
+              "perl6"
+            ],
+            "extensions": [
+              ".raku",
+              ".rakumod",
+              ".rakutest",
+              ".rakudoc",
+              ".nqp",
+              ".p6",
+              ".pl6",
+              ".pm6"
+            ],
+            "firstLine": "(^#!.*\\bperl6\\b)|use\\s+v6|raku|=begin\\spod|my\\sclass",
+            "configuration": "./perl6.language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "perl",
+            "scopeName": "source.perl",
+            "path": "./syntaxes/perl.tmLanguage.json",
+            "unbalancedBracketScopes": [
+              "variable.other.predefined.perl"
+            ]
+          },
+          {
+            "language": "raku",
+            "scopeName": "source.perl.6",
+            "path": "./syntaxes/perl6.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Perl Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Perl files."
+    }
+  },
+  {
+    "extensionPath": "php",
+    "packageJSON": {
+      "name": "php",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "php",
+            "extensions": [
+              ".php",
+              ".php4",
+              ".php5",
+              ".phtml",
+              ".ctp"
+            ],
+            "aliases": [
+              "PHP",
+              "php"
+            ],
+            "firstLine": "^#!\\s*/.*\\bphp\\b",
+            "mimetypes": [
+              "application/x-php"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "php",
+            "scopeName": "source.php",
+            "path": "./syntaxes/php.tmLanguage.json"
+          },
+          {
+            "language": "php",
+            "scopeName": "text.html.php",
+            "path": "./syntaxes/html.tmLanguage.json",
+            "embeddedLanguages": {
+              "text.html": "html",
+              "source.php": "php",
+              "source.sql": "sql",
+              "text.xml": "xml",
+              "source.js": "javascript",
+              "source.json": "json",
+              "source.css": "css"
+            }
+          }
+        ],
+        "snippets": [
+          {
+            "language": "php",
+            "path": "./snippets/php.code-snippets"
+          }
+        ]
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "PHP Language Basics",
+      "description": "Provides syntax highlighting and bracket matching for PHP files."
+    }
+  },
+  {
+    "extensionPath": "powershell",
+    "packageJSON": {
+      "name": "powershell",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "powershell",
+            "extensions": [
+              ".ps1",
+              ".psm1",
+              ".psd1",
+              ".pssc",
+              ".psrc"
+            ],
+            "aliases": [
+              "PowerShell",
+              "powershell",
+              "ps",
+              "ps1",
+              "pwsh"
+            ],
+            "firstLine": "^#!\\s*/.*\\bpwsh\\b",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "powershell",
+            "scopeName": "source.powershell",
+            "path": "./syntaxes/powershell.tmLanguage.json"
+          }
+        ]
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin PowerShell/EditorSyntax PowerShellSyntax.tmLanguage ./syntaxes/powershell.tmLanguage.json"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Powershell Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in Powershell files."
+    }
+  },
+  {
+    "extensionPath": "python",
+    "packageJSON": {
+      "name": "python",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "python",
+            "extensions": [
+              ".py",
+              ".rpy",
+              ".pyw",
+              ".cpy",
+              ".gyp",
+              ".gypi",
+              ".pyi",
+              ".ipy",
+              ".pyt"
+            ],
+            "aliases": [
+              "Python",
+              "py"
+            ],
+            "filenames": [
+              "SConstruct",
+              "SConscript"
+            ],
+            "firstLine": "^#!\\s*/?.*\\bpython[0-9.-]*\\b",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "python",
+            "scopeName": "source.python",
+            "path": "./syntaxes/MagicPython.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.regexp.python",
+            "path": "./syntaxes/MagicRegExp.tmLanguage.json"
+          }
+        ],
+        "configurationDefaults": {
+          "[python]": {
+            "diffEditor.ignoreTrimWhitespace": false,
+            "editor.defaultColorDecorators": "never"
+          }
+        }
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin MagicStack/MagicPython grammars/MagicPython.tmLanguage ./syntaxes/MagicPython.tmLanguage.json grammars/MagicRegExp.tmLanguage ./syntaxes/MagicRegExp.tmLanguage.json"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Python Language Basics",
+      "description": "Provides syntax highlighting, bracket matching and folding in Python files."
+    }
+  },
+  {
+    "extensionPath": "r",
+    "packageJSON": {
+      "name": "r",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin REditorSupport/vscode-R-syntax syntaxes/r.json ./syntaxes/r.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "r",
+            "extensions": [
+              ".R",
+              ".Rhistory",
+              ".Rprofile",
+              ".rt"
+            ],
+            "aliases": [
+              "R",
+              "r"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "r",
+            "scopeName": "source.r",
+            "path": "./syntaxes/r.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "R Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in R files."
+    }
+  },
+  {
+    "extensionPath": "razor",
+    "packageJSON": {
+      "name": "razor",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "0.10.x"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "razor",
+            "extensions": [
+              ".cshtml",
+              ".razor"
+            ],
+            "aliases": [
+              "Razor",
+              "razor"
+            ],
+            "mimetypes": [
+              "text/x-cshtml"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "razor",
+            "scopeName": "text.html.cshtml",
+            "path": "./syntaxes/cshtml.tmLanguage.json",
+            "embeddedLanguages": {
+              "section.embedded.source.cshtml": "csharp",
+              "source.css": "css",
+              "source.js": "javascript"
+            }
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Razor Language Basics",
+      "description": "Provides syntax highlighting, bracket matching and folding in Razor files."
+    }
+  },
+  {
+    "extensionPath": "ruby",
+    "packageJSON": {
+      "name": "ruby",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin Shopify/ruby-lsp vscode/grammars/ruby.cson.json ./syntaxes/ruby.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "ruby",
+            "extensions": [
+              ".rb",
+              ".rbx",
+              ".rjs",
+              ".gemspec",
+              ".rake",
+              ".ru",
+              ".erb",
+              ".podspec",
+              ".rbi"
+            ],
+            "filenames": [
+              "rakefile",
+              "gemfile",
+              "guardfile",
+              "podfile",
+              "capfile",
+              "cheffile",
+              "hobofile",
+              "vagrantfile",
+              "appraisals",
+              "rantfile",
+              "berksfile",
+              "berksfile.lock",
+              "thorfile",
+              "puppetfile",
+              "dangerfile",
+              "brewfile",
+              "fastfile",
+              "appfile",
+              "deliverfile",
+              "matchfile",
+              "scanfile",
+              "snapfile",
+              "gymfile"
+            ],
+            "aliases": [
+              "Ruby",
+              "rb"
+            ],
+            "firstLine": "^#!\\s*/.*\\bruby\\b",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "ruby",
+            "scopeName": "source.ruby",
+            "path": "./syntaxes/ruby.tmLanguage.json"
+          }
+        ],
+        "configurationDefaults": {
+          "[ruby]": {
+            "editor.defaultColorDecorators": "never"
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Ruby Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Ruby files."
+    }
+  },
+  {
+    "extensionPath": "rust",
+    "packageJSON": {
+      "name": "rust",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "rust",
+            "extensions": [
+              ".rs"
+            ],
+            "aliases": [
+              "Rust",
+              "rust"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "rust",
+            "path": "./syntaxes/rust.tmLanguage.json",
+            "scopeName": "source.rust"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Rust Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Rust files."
+    }
+  },
+  {
+    "extensionPath": "scss",
+    "packageJSON": {
+      "name": "scss",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin atom/language-sass grammars/scss.cson ./syntaxes/scss.tmLanguage.json grammars/sassdoc.cson ./syntaxes/sassdoc.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "scss",
+            "aliases": [
+              "SCSS",
+              "scss"
+            ],
+            "extensions": [
+              ".scss"
+            ],
+            "mimetypes": [
+              "text/x-scss",
+              "text/scss"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "scss",
+            "scopeName": "source.css.scss",
+            "path": "./syntaxes/scss.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.sassdoc",
+            "path": "./syntaxes/sassdoc.tmLanguage.json"
+          }
+        ],
+        "problemMatchers": [
+          {
+            "name": "node-sass",
+            "label": "Node Sass Compiler",
+            "owner": "node-sass",
+            "fileLocation": "absolute",
+            "pattern": [
+              {
+                "regexp": "^{$"
+              },
+              {
+                "regexp": "\\s*\"status\":\\s\\d+,"
+              },
+              {
+                "regexp": "\\s*\"file\":\\s\"(.*)\",",
+                "file": 1
+              },
+              {
+                "regexp": "\\s*\"line\":\\s(\\d+),",
+                "line": 1
+              },
+              {
+                "regexp": "\\s*\"column\":\\s(\\d+),",
+                "column": 1
+              },
+              {
+                "regexp": "\\s*\"message\":\\s\"(.*)\",",
+                "message": 1
+              },
+              {
+                "regexp": "\\s*\"formatted\":\\s(.*)"
+              },
+              {
+                "regexp": "^}$"
+              }
+            ]
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "SCSS Language Basics",
+      "description": "Provides syntax highlighting, bracket matching and folding in SCSS files."
+    }
+  },
+  {
+    "extensionPath": "shaderlab",
+    "packageJSON": {
+      "name": "shaderlab",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin tgjones/shaders-tmLanguage grammars/shaderlab.json ./syntaxes/shaderlab.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "shaderlab",
+            "extensions": [
+              ".shader"
+            ],
+            "aliases": [
+              "ShaderLab",
+              "shaderlab"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "shaderlab",
+            "path": "./syntaxes/shaderlab.tmLanguage.json",
+            "scopeName": "source.shaderlab"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Shaderlab Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Shaderlab files."
+    }
+  },
+  {
+    "extensionPath": "shellscript",
+    "packageJSON": {
+      "name": "shellscript",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin jeff-hykin/better-shell-syntax autogenerated/shell.tmLanguage.json ./syntaxes/shell-unix-bash.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "shellscript",
+            "aliases": [
+              "Shell Script",
+              "shellscript",
+              "bash",
+              "fish",
+              "sh",
+              "zsh",
+              "ksh",
+              "csh"
+            ],
+            "extensions": [
+              ".sh",
+              ".bash",
+              ".bashrc",
+              ".bash_aliases",
+              ".bash_profile",
+              ".bash_login",
+              ".ebuild",
+              ".eclass",
+              ".profile",
+              ".bash_logout",
+              ".xprofile",
+              ".xsession",
+              ".xsessionrc",
+              ".Xsession",
+              ".zsh",
+              ".zshrc",
+              ".zprofile",
+              ".zlogin",
+              ".zlogout",
+              ".zshenv",
+              ".zsh-theme",
+              ".fish",
+              ".ksh",
+              ".csh",
+              ".cshrc",
+              ".tcshrc",
+              ".yashrc",
+              ".yash_profile"
+            ],
+            "filenames": [
+              "APKBUILD",
+              "PKGBUILD",
+              ".envrc",
+              ".hushlogin",
+              "zshrc",
+              "zshenv",
+              "zlogin",
+              "zprofile",
+              "zlogout",
+              "bashrc_Apple_Terminal",
+              "zshrc_Apple_Terminal"
+            ],
+            "firstLine": "^#!.*\\b(bash|fish|zsh|sh|ksh|dtksh|pdksh|mksh|ash|dash|yash|sh|csh|jcsh|tcsh|itcsh).*|^#\\s*-\\*-[^*]*mode:\\s*shell-script[^*]*-\\*-",
+            "configuration": "./language-configuration.json",
+            "mimetypes": [
+              "text/x-shellscript"
+            ]
+          }
+        ],
+        "grammars": [
+          {
+            "language": "shellscript",
+            "scopeName": "source.shell",
+            "path": "./syntaxes/shell-unix-bash.tmLanguage.json",
+            "balancedBracketScopes": [
+              "*"
+            ],
+            "unbalancedBracketScopes": [
+              "meta.scope.case-pattern.shell"
+            ]
+          }
+        ],
+        "configurationDefaults": {
+          "[shellscript]": {
+            "files.eol": "\n",
+            "editor.defaultColorDecorators": "never"
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Shell Script Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in Shell Script files."
+    }
+  },
+  {
+    "extensionPath": "sql",
+    "packageJSON": {
+      "name": "sql",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.mjs"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "sql",
+            "extensions": [
+              ".sql",
+              ".dsql"
+            ],
+            "aliases": [
+              "MS SQL",
+              "T-SQL"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "sql",
+            "scopeName": "source.sql",
+            "path": "./syntaxes/sql.tmLanguage.json"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "SQL Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in SQL files."
+    }
+  },
+  {
+    "extensionPath": "swift",
+    "packageJSON": {
+      "name": "swift",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin jtbandes/swift-tmlanguage Swift.tmLanguage.json ./syntaxes/swift.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "swift",
+            "aliases": [
+              "Swift",
+              "swift"
+            ],
+            "extensions": [
+              ".swift"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "swift",
+            "scopeName": "source.swift",
+            "path": "./syntaxes/swift.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "swift",
+            "path": "./snippets/swift.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Swift Language Basics",
+      "description": "Provides snippets, syntax highlighting and bracket matching in Swift files."
+    }
+  },
+  {
+    "extensionPath": "typescript-basics",
+    "packageJSON": {
+      "name": "typescript",
+      "description": "%description%",
+      "displayName": "%displayName%",
+      "version": "10.0.0",
+      "author": "vscode",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammars.mjs"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "typescript",
+            "aliases": [
+              "TypeScript",
+              "ts",
+              "typescript"
+            ],
+            "extensions": [
+              ".ts",
+              ".cts",
+              ".mts"
+            ],
+            "firstLine": "^#!.*\\b(deno|bun|ts-node)\\b",
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "typescriptreact",
+            "aliases": [
+              "TypeScript JSX",
+              "TypeScript React",
+              "tsx"
+            ],
+            "extensions": [
+              ".tsx"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "jsonc",
+            "filenames": [
+              "tsconfig.json",
+              "jsconfig.json"
+            ],
+            "filenamePatterns": [
+              "tsconfig.*.json",
+              "jsconfig.*.json",
+              "tsconfig-*.json",
+              "jsconfig-*.json"
+            ]
+          },
+          {
+            "id": "json",
+            "extensions": [
+              ".tsbuildinfo"
+            ]
+          }
+        ],
+        "grammars": [
+          {
+            "language": "typescript",
+            "scopeName": "source.ts",
+            "path": "./syntaxes/TypeScript.tmLanguage.json",
+            "unbalancedBracketScopes": [
+              "keyword.operator.relational",
+              "storage.type.function.arrow",
+              "keyword.operator.bitwise.shift",
+              "meta.brace.angle",
+              "punctuation.definition.tag",
+              "keyword.operator.assignment.compound.bitwise.ts"
+            ],
+            "tokenTypes": {
+              "punctuation.definition.template-expression": "other",
+              "entity.name.type.instance.jsdoc": "other",
+              "entity.name.function.tagged-template": "other",
+              "meta.import string.quoted": "other",
+              "variable.other.jsdoc": "other"
+            }
+          },
+          {
+            "language": "typescriptreact",
+            "scopeName": "source.tsx",
+            "path": "./syntaxes/TypeScriptReact.tmLanguage.json",
+            "unbalancedBracketScopes": [
+              "keyword.operator.relational",
+              "storage.type.function.arrow",
+              "keyword.operator.bitwise.shift",
+              "punctuation.definition.tag",
+              "keyword.operator.assignment.compound.bitwise.ts"
+            ],
+            "embeddedLanguages": {
+              "meta.tag.tsx": "jsx-tags",
+              "meta.tag.without-attributes.tsx": "jsx-tags",
+              "meta.tag.attributes.tsx": "typescriptreact",
+              "meta.embedded.expression.tsx": "typescriptreact"
+            },
+            "tokenTypes": {
+              "punctuation.definition.template-expression": "other",
+              "entity.name.type.instance.jsdoc": "other",
+              "entity.name.function.tagged-template": "other",
+              "meta.import string.quoted": "other",
+              "variable.other.jsdoc": "other"
+            }
+          },
+          {
+            "scopeName": "documentation.injection.ts",
+            "path": "./syntaxes/jsdoc.ts.injection.tmLanguage.json",
+            "injectTo": [
+              "source.ts",
+              "source.tsx"
+            ]
+          },
+          {
+            "scopeName": "documentation.injection.js.jsx",
+            "path": "./syntaxes/jsdoc.js.injection.tmLanguage.json",
+            "injectTo": [
+              "source.js",
+              "source.js.jsx"
+            ]
+          }
+        ],
+        "semanticTokenScopes": [
+          {
+            "language": "typescript",
+            "scopes": {
+              "property": [
+                "variable.other.property.ts"
+              ],
+              "property.readonly": [
+                "variable.other.constant.property.ts"
+              ],
+              "variable": [
+                "variable.other.readwrite.ts"
+              ],
+              "variable.readonly": [
+                "variable.other.constant.object.ts"
+              ],
+              "function": [
+                "entity.name.function.ts"
+              ],
+              "namespace": [
+                "entity.name.type.module.ts"
+              ],
+              "variable.defaultLibrary": [
+                "support.variable.ts"
+              ],
+              "function.defaultLibrary": [
+                "support.function.ts"
+              ]
+            }
+          },
+          {
+            "language": "typescriptreact",
+            "scopes": {
+              "property": [
+                "variable.other.property.tsx"
+              ],
+              "property.readonly": [
+                "variable.other.constant.property.tsx"
+              ],
+              "variable": [
+                "variable.other.readwrite.tsx"
+              ],
+              "variable.readonly": [
+                "variable.other.constant.object.tsx"
+              ],
+              "function": [
+                "entity.name.function.tsx"
+              ],
+              "namespace": [
+                "entity.name.type.module.tsx"
+              ],
+              "variable.defaultLibrary": [
+                "support.variable.tsx"
+              ],
+              "function.defaultLibrary": [
+                "support.function.tsx"
+              ]
+            }
+          }
+        ],
+        "snippets": [
+          {
+            "language": "typescript",
+            "path": "./snippets/typescript.code-snippets"
+          },
+          {
+            "language": "typescriptreact",
+            "path": "./snippets/typescript.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "TypeScript Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in TypeScript files."
+    }
+  },
+  {
+    "extensionPath": "vb",
+    "packageJSON": {
+      "name": "vb",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin textmate/asp.vb.net.tmbundle Syntaxes/ASP%20VB.net.plist ./syntaxes/asp-vb-net.tmLanguage.json"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "vb",
+            "extensions": [
+              ".vb",
+              ".brs",
+              ".vbs",
+              ".bas",
+              ".vba"
+            ],
+            "aliases": [
+              "Visual Basic",
+              "vb"
+            ],
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "vb",
+            "scopeName": "source.asp.vb.net",
+            "path": "./syntaxes/asp-vb-net.tmLanguage.json"
+          }
+        ],
+        "snippets": [
+          {
+            "language": "vb",
+            "path": "./snippets/vb.code-snippets"
+          }
+        ]
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "Visual Basic Language Basics",
+      "description": "Provides snippets, syntax highlighting, bracket matching and folding in Visual Basic files."
+    }
+  },
+  {
+    "extensionPath": "xml",
+    "packageJSON": {
+      "name": "xml",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "xml",
+            "extensions": [
+              ".xml",
+              ".xsd",
+              ".ascx",
+              ".atom",
+              ".axml",
+              ".axaml",
+              ".bpmn",
+              ".cpt",
+              ".csl",
+              ".csproj",
+              ".csproj.user",
+              ".dita",
+              ".ditamap",
+              ".dtd",
+              ".ent",
+              ".mod",
+              ".dtml",
+              ".fsproj",
+              ".fxml",
+              ".iml",
+              ".isml",
+              ".jmx",
+              ".launch",
+              ".menu",
+              ".mxml",
+              ".nuspec",
+              ".opml",
+              ".owl",
+              ".proj",
+              ".props",
+              ".pt",
+              ".publishsettings",
+              ".pubxml",
+              ".pubxml.user",
+              ".rbxlx",
+              ".rbxmx",
+              ".rdf",
+              ".rng",
+              ".rss",
+              ".shproj",
+              ".slnx",
+              ".storyboard",
+              ".svg",
+              ".targets",
+              ".tld",
+              ".tmx",
+              ".vbproj",
+              ".vbproj.user",
+              ".vcxproj",
+              ".vcxproj.filters",
+              ".wsdl",
+              ".wxi",
+              ".wxl",
+              ".wxs",
+              ".xaml",
+              ".xbl",
+              ".xib",
+              ".xlf",
+              ".xliff",
+              ".xpdl",
+              ".xul",
+              ".xoml"
+            ],
+            "firstLine": "(\\<\\?xml.*)|(\\<svg)|(\\<\\!doctype\\s+svg)",
+            "aliases": [
+              "XML",
+              "xml"
+            ],
+            "configuration": "./xml.language-configuration.json"
+          },
+          {
+            "id": "xsl",
+            "extensions": [
+              ".xsl",
+              ".xslt"
+            ],
+            "aliases": [
+              "XSL",
+              "xsl"
+            ],
+            "configuration": "./xsl.language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "xml",
+            "scopeName": "text.xml",
+            "path": "./syntaxes/xml.tmLanguage.json"
+          },
+          {
+            "language": "xsl",
+            "scopeName": "text.xml.xsl",
+            "path": "./syntaxes/xsl.tmLanguage.json"
+          }
+        ]
+      },
+      "scripts": {
+        "update-grammar": "node ../node_modules/vscode-grammar-updater/bin atom/language-xml grammars/xml.cson ./syntaxes/xml.tmLanguage.json grammars/xsl.cson ./syntaxes/xsl.tmLanguage.json"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "XML Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in XML files."
+    }
+  },
+  {
+    "extensionPath": "yaml",
+    "packageJSON": {
+      "name": "yaml",
+      "displayName": "%displayName%",
+      "description": "%description%",
+      "version": "10.0.0",
+      "publisher": "vscode",
+      "license": "MIT",
+      "engines": {
+        "vscode": "*"
+      },
+      "scripts": {
+        "update-grammar": "node ./build/update-grammar.js"
+      },
+      "categories": [
+        "Programming Languages"
+      ],
+      "contributes": {
+        "languages": [
+          {
+            "id": "dockercompose",
+            "aliases": [
+              "Compose",
+              "compose"
+            ],
+            "filenamePatterns": [
+              "compose.yml",
+              "compose.yaml",
+              "compose.*.yml",
+              "compose.*.yaml",
+              "*docker*compose*.yml",
+              "*docker*compose*.yaml"
+            ],
+            "configuration": "./language-configuration.json"
+          },
+          {
+            "id": "yaml",
+            "aliases": [
+              "YAML",
+              "yaml"
+            ],
+            "extensions": [
+              ".yaml",
+              ".yml",
+              ".eyaml",
+              ".eyml",
+              ".cff",
+              ".yaml-tmlanguage",
+              ".yaml-tmpreferences",
+              ".yaml-tmtheme",
+              ".winget"
+            ],
+            "firstLine": "^#cloud-config",
+            "configuration": "./language-configuration.json"
+          }
+        ],
+        "grammars": [
+          {
+            "language": "dockercompose",
+            "scopeName": "source.yaml",
+            "path": "./syntaxes/yaml.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.yaml.1.3",
+            "path": "./syntaxes/yaml-1.3.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.yaml.1.2",
+            "path": "./syntaxes/yaml-1.2.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.yaml.1.1",
+            "path": "./syntaxes/yaml-1.1.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.yaml.1.0",
+            "path": "./syntaxes/yaml-1.0.tmLanguage.json"
+          },
+          {
+            "scopeName": "source.yaml.embedded",
+            "path": "./syntaxes/yaml-embedded.tmLanguage.json"
+          },
+          {
+            "language": "yaml",
+            "scopeName": "source.yaml",
+            "path": "./syntaxes/yaml.tmLanguage.json",
+            "unbalancedBracketScopes": [
+              "invalid.illegal",
+              "meta.scalar.yaml",
+              "storage.type.tag.shorthand.yaml",
+              "keyword.control.flow"
+            ]
+          }
+        ],
+        "configurationDefaults": {
+          "[yaml]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2,
+            "editor.autoIndent": "advanced",
+            "diffEditor.ignoreTrimWhitespace": false,
+            "editor.defaultColorDecorators": "never",
+            "editor.quickSuggestions": {
+              "strings": "on"
+            }
+          },
+          "[dockercompose]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2,
+            "editor.autoIndent": "advanced"
+          }
+        }
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/microsoft/vscode.git"
+      }
+    },
+    "packageNLS": {
+      "displayName": "YAML Language Basics",
+      "description": "Provides syntax highlighting and bracket matching in YAML files."
+    }
+  }
+]

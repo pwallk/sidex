@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 import * as path from 'path';
 
 export default defineConfig({
@@ -9,7 +10,24 @@ export default defineConfig({
     watch: {
       ignored: ['**/src-tauri/**'],
     },
+    fs: {
+      allow: ['.', 'extensions'],
+    },
   },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'extensions/*',
+          dest: 'extensions',
+        },
+        {
+          src: 'extensions-meta.json',
+          dest: '.',
+        },
+      ],
+    }),
+  ],
   envPrefix: ['VITE_', 'TAURI_'],
   resolve: {
     alias: {
