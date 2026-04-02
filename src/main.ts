@@ -3,6 +3,21 @@
  *  Entry point. Globals set by inline script in index.html.
  *--------------------------------------------------------------------------------------------*/
 
+async function sidexOpenFolder() {
+	try {
+		const { open } = await import('@tauri-apps/plugin-dialog');
+		const selected = await open({ directory: true, multiple: false });
+		if (selected && typeof selected === 'string') {
+			const url = new URL(window.location.href);
+			url.searchParams.set('folder', `file://${selected}`);
+			window.location.href = url.toString();
+		}
+	} catch (e) {
+		console.error('[SideX] Failed to open folder picker:', e);
+	}
+}
+(window as any).__sidex_openFolder = sidexOpenFolder;
+
 async function boot() {
 	const stages = [
 		['common',       () => import('./vs/workbench/workbench.common.main.js')],
@@ -261,6 +276,11 @@ function setupMenuActions() {
 			return;
 		}
 
+		if (menuId === 'open_folder') {
+			sidexOpenFolder();
+			return;
+		}
+
 		const commandId = menuToCommand[menuId];
 		if (!commandId) {
 			console.warn(`[SideX] Unknown menu action: ${menuId}`);
@@ -286,9 +306,11 @@ function setupMenuActions() {
 	window.addEventListener('sidex-command', async (e: any) => {
 		const commandId = e.detail?.commandId;
 		if (!commandId) return;
+		if (commandId === 'workbench.action.files.openFolder' || commandId === 'workbench.action.files.openFolderViaWorkspace') {
+			sidexOpenFolder();
+			return;
+		}
 		try {
-			// Use the keybinding dispatch trick — simulate the keyboard shortcut
-			// or directly invoke the command if the service is available
 			const commandService = (window as any).__sidex_commandService;
 			if (commandService) {
 				await commandService.executeCommand(commandId);

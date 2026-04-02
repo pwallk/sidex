@@ -32,7 +32,6 @@ fn validate_url(url: &str) -> Result<reqwest::Url, String> {
             if v4.is_private() || v4.is_link_local() {
                 return Err("requests to private/link-local addresses are blocked".to_string());
             }
-            // Block cloud metadata endpoint (169.254.169.254)
             if v4.octets() == [169, 254, 169, 254] {
                 return Err("requests to metadata endpoints are blocked".to_string());
             }

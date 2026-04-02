@@ -966,7 +966,7 @@ export abstract class Layout extends Disposable implements IWorkbenchLayoutServi
 			mark('code/restoreEditors/editorGroupsReady');
 
 			// apply editor layout if any
-			if (this.state.initialization.layout?.editors) {
+			if (this.state.initialization.layout?.editors?.groups) {
 				this.editorGroupService.mainPart.applyLayout(this.state.initialization.layout.editors);
 			}
 

@@ -24,10 +24,22 @@ export default defineConfig({
     sourcemap: false,
     chunkSizeWarningLimit: 25000,
     rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, 'index.html'),
+        textMateWorker: path.resolve(__dirname, 'src/vs/workbench/services/textMate/browser/backgroundTokenization/worker/textMateTokenizationWorker.workerMain.ts'),
+        editorWorker: path.resolve(__dirname, 'src/vs/editor/common/services/editorWebWorkerMain.ts'),
+        extensionHostWorker: path.resolve(__dirname, 'src/vs/workbench/api/worker/extensionHostWorkerMain.ts'),
+      },
       output: {
         entryFileNames: 'assets/[name]-[hash].js',
         chunkFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash][extname]',
+        assetFileNames: (assetInfo) => {
+          if ((assetInfo.name ?? '').endsWith('.ts')) {
+            const base = (assetInfo.name ?? 'asset').slice(0, -3);
+            return `assets/${base}-[hash].js`;
+          }
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
     esbuild: {

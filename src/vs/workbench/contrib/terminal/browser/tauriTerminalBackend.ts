@@ -113,42 +113,14 @@ class TauriPty extends Disposable implements ITerminalChildProcess {
 				envToPass['LANG'] = 'en_US.UTF-8';
 			}
 
-			// Shell integration injection
+			// Pass args from shell launch config; Rust will add -l if none provided
 			let shellArgs: string[] | undefined;
 			if (Array.isArray(args)) {
 				shellArgs = args as string[];
 			} else if (typeof args === 'string') {
 				shellArgs = [args];
 			}
-
 			const shellBasename = shell ? shell.split('/').pop() || '' : '';
-			const shellIntegrationEnabled = !this._shellLaunchConfig.ignoreShellIntegration;
-
-			if (shellIntegrationEnabled && shellBasename) {
-				envToPass['VSCODE_INJECTION'] = '1';
-
-				if (shellBasename === 'zsh') {
-					try {
-						const zdotdir = await _invoke('setup_zsh_dotdir', {}) as string;
-						if (zdotdir) {
-							envToPass['ZDOTDIR'] = zdotdir;
-							envToPass['USER_ZDOTDIR'] = envToPass['HOME'] || '';
-						}
-					} catch (e) {
-						console.warn('[SideX Terminal] Failed to set up zsh ZDOTDIR:', e);
-					}
-				} else if (shellBasename === 'bash') {
-					try {
-						const scriptsDir = await _invoke('get_shell_integration_dir', {}) as string;
-						if (scriptsDir) {
-							const rcFile = `${scriptsDir}/shellIntegration-bash.sh`;
-							shellArgs = ['--init-file', rcFile];
-						}
-					} catch (e) {
-						console.warn('[SideX Terminal] Failed to set up bash shell integration:', e);
-					}
-				}
-			}
 
 			const dataBuffer: string[] = [];
 			let attached = false;
@@ -449,23 +421,9 @@ class TauriTerminalBackend extends Disposable implements ITerminalBackend {
 	}
 
 	async getEnvironment(): Promise<IProcessEnvironment> {
-		await ensureTauri();
-		if (_invoke) {
-			try {
-				const env = await _invoke('get_all_env') as Record<string, string>;
-				if (env) return env;
-			} catch { }
-		}
 		return {};
 	}
 	async getShellEnvironment(): Promise<IProcessEnvironment | undefined> {
-		await ensureTauri();
-		if (_invoke) {
-			try {
-				const env = await _invoke('get_all_env') as Record<string, string>;
-				if (env) return env;
-			} catch { }
-		}
 		return {};
 	}
 	async setTerminalLayoutInfo(_layoutInfo?: ITerminalsLayoutInfoById): Promise<void> { }

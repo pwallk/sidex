@@ -383,10 +383,13 @@ const BLOCKED_GIT_FLAGS: &[&str] = &[
 ];
 
 const ALLOWED_GIT_SUBCOMMANDS: &[&str] = &[
-    "status", "diff", "log", "show", "branch", "checkout", "add",
-    "commit", "push", "pull", "fetch", "stash", "reset", "merge",
-    "rebase", "tag", "remote", "rev-parse", "blame", "reflog",
-    "cherry-pick", "clean", "describe", "shortlog",
+    "add", "am", "apply", "archive", "bisect", "blame", "branch", "cat-file",
+    "cherry-pick", "checkout", "clone", "commit", "describe", "diff",
+    "fetch", "for-each-ref", "format-patch", "gc", "grep", "hash-object",
+    "init", "log", "ls-files", "ls-remote", "ls-tree", "merge", "pack-refs",
+    "prune", "pull", "push", "rebase", "reflog", "remote", "reset", "revert",
+    "rev-parse", "shortlog", "show", "stash", "status", "submodule", "tag",
+    "worktree", "clean",
 ];
 
 fn validate_git_args(args: &[String]) -> Result<(), String> {

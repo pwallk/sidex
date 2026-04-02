@@ -318,7 +318,6 @@ pub fn run() {
             commands::get_monitors,
             commands::get_os_info,
             commands::get_env,
-            commands::get_all_env,
             commands::get_shell,
             commands::storage_get,
             commands::storage_set,
