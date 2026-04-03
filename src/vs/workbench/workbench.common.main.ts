@@ -124,7 +124,8 @@ import './services/userAttention/browser/userAttentionBrowser.js';
 import './services/editor/browser/editorPaneService.js';
 import './services/editor/common/customEditorLabelService.js';
 import './services/dataChannel/browser/dataChannelService.js';
-import './contrib/inlineCompletions/browser/renameSymbolTrackerService.js';import './services/log/common/defaultLogLevels.js';
+import './contrib/inlineCompletions/browser/renameSymbolTrackerService.js';
+import './services/log/common/defaultLogLevels.js';
 
 import { InstantiationType, registerSingleton } from '../platform/instantiation/common/extensions.js';
 import { GlobalExtensionEnablementService } from '../platform/extensionManagement/common/extensionEnablementService.js';
@@ -146,13 +147,13 @@ import { OpenerService } from '../editor/browser/services/openerService.js';
 import { IOpenerService } from '../platform/opener/common/opener.js';
 import { IgnoredExtensionsManagementService, IIgnoredExtensionsManagementService } from '../platform/userDataSync/common/ignoredExtensions.js';
 import { ExtensionStorageService, IExtensionStorageService } from '../platform/extensionManagement/common/extensionStorage.js';
-import { IUserDataSyncLogService } from '../platform/userDataSync/common/userDataSync.js';
-import { UserDataSyncLogService } from '../platform/userDataSync/common/userDataSyncLog.js';
+// Null UserDataSync stubs (avoid importing heavy userDataSync modules)
+import '../platform/userDataSync/common/nullUserDataSync.js';
+import './services/userDataSync/common/userDataSync.js';
 import { AllowedExtensionsService } from '../platform/extensionManagement/common/allowedExtensionsService.js';
 import { IWebWorkerService } from '../platform/webWorker/browser/webWorkerService.js';
 import { WebWorkerService } from '../platform/webWorker/browser/webWorkerServiceImpl.js';
 
-registerSingleton(IUserDataSyncLogService, UserDataSyncLogService, InstantiationType.Delayed);
 registerSingleton(IAllowedExtensionsService, AllowedExtensionsService, InstantiationType.Delayed);
 registerSingleton(IIgnoredExtensionsManagementService, IgnoredExtensionsManagementService, InstantiationType.Delayed);
 registerSingleton(IGlobalExtensionEnablementService, GlobalExtensionEnablementService, InstantiationType.Delayed);
@@ -411,5 +412,8 @@ import './contrib/editTelemetry/browser/editTelemetry.contribution.js';
 
 // Opener
 import './contrib/opener/browser/opener.contribution.js';
+
+// Null stubs for stripped services
+import '../editor/browser/services/renameSymbolTrackerService.js';
 
 //#endregion

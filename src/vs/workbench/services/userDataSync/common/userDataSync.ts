@@ -104,3 +104,29 @@ export const DOWNLOAD_ACTIVITY_ACTION_DESCRIPTOR: Readonly<IAction2Options> = {
 	f1: true,
 	precondition: ContextKeyExpr.and(CONTEXT_ACCOUNT_STATE.isEqualTo(AccountStatus.Available), CONTEXT_SYNC_STATE.notEqualsTo(SyncStatus.Uninitialized))
 };
+
+// Null implementation — no online sync in this build
+import { InstantiationType, registerSingleton } from '../../../../platform/instantiation/common/extensions.js';
+
+export class NullUserDataSyncWorkbenchService implements IUserDataSyncWorkbenchService {
+	declare _serviceBrand: undefined;
+	readonly enabled = false;
+	readonly authenticationProviders = [];
+	readonly current = undefined;
+	readonly accountStatus = AccountStatus.Unavailable;
+	readonly onDidChangeAccountStatus = Event.None;
+	readonly onDidTurnOnSync = Event.None;
+	async turnOn(): Promise<void> { }
+	async turnoff(): Promise<void> { }
+	async signIn(): Promise<void> { }
+	async resetSyncedData(): Promise<void> { }
+	async showSyncActivity(): Promise<void> { }
+	async syncNow(): Promise<void> { }
+	async synchroniseUserDataSyncStoreType(): Promise<void> { }
+	async showConflicts(): Promise<void> { }
+	async accept(): Promise<void> { }
+	async getAllLogResources(): Promise<URI[]> { return []; }
+	async downloadSyncActivity(): Promise<URI | undefined> { return undefined; }
+}
+
+registerSingleton(IUserDataSyncWorkbenchService, NullUserDataSyncWorkbenchService, InstantiationType.Delayed);
