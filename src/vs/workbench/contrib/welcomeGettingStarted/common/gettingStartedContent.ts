@@ -13,22 +13,10 @@ import { registerIcon } from '../../../../platform/theme/common/iconRegistry.js'
 import { NotebookSetting } from '../../notebook/common/notebookCommon.js';
 import { CONTEXT_ACCESSIBILITY_MODE_ENABLED } from '../../../../platform/accessibility/common/accessibility.js';
 import { URI } from '../../../../base/common/uri.js';
-import product from '../../../../platform/product/common/product.js';
 
 interface IGettingStartedContentProvider {
 	(): string;
 }
-
-const defaultChat = {
-	documentationUrl: product.defaultChatAgent?.documentationUrl ?? '',
-	manageSettingsUrl: product.defaultChatAgent?.manageSettingsUrl ?? '',
-	provider: product.defaultChatAgent?.provider ?? { default: { name: '' } },
-	publicCodeMatchesUrl: product.defaultChatAgent?.publicCodeMatchesUrl ?? '',
-	termsStatementUrl: product.defaultChatAgent?.termsStatementUrl ?? '',
-	privacyStatementUrl: product.defaultChatAgent?.privacyStatementUrl ?? ''
-};
-
-export const copilotSettingsMessage = localize({ key: 'settings', comment: ['{Locked="["}', '{Locked="]({0})"}', '{Locked="]({1})"}'] }, "{0} Copilot may show [public code]({1}) suggestions and use your data to improve the product. You can change these [settings]({2}) anytime.", defaultChat.provider.default.name, defaultChat.publicCodeMatchesUrl, defaultChat.manageSettingsUrl);
 
 class GettingStartedContentProviderRegistry {
 
@@ -212,30 +200,6 @@ export const startEntries: GettingStartedStartEntryContent = [
 ];
 
 const Button = (title: string, href: string) => `[${title}](${href})`;
-
-const CopilotStepTitle = localize('gettingStarted.copilotSetup.title', "Use AI features with Copilot for free");
-const CopilotDescription = localize({ key: 'gettingStarted.copilotSetup.description', comment: ['{Locked="["}', '{Locked="]({0})"}'] }, "You can use [Copilot]({0}) to generate code across multiple files, fix errors, ask questions about your code, and much more using natural language.", defaultChat.documentationUrl ?? '');
-const CopilotTermsString = localize({ key: 'gettingStarted.copilotSetup.terms', comment: ['{Locked="]({2})"}', '{Locked="]({3})"}'] }, "By continuing with {0} Copilot, you agree to {1}'s [Terms]({2}) and [Privacy Statement]({3})", defaultChat.provider.default.name, defaultChat.provider.default.name, defaultChat.termsStatementUrl, defaultChat.privacyStatementUrl);
-const CopilotAnonymousButton = Button(localize('setupCopilotButton.setup', "Use AI Features"), `command:workbench.action.chat.triggerSetupAnonymousWithoutDialog`);
-const CopilotSignedOutButton = Button(localize('setupCopilotButton.setup', "Use AI Features"), `command:workbench.action.chat.triggerSetup`);
-const CopilotSignedInButton = Button(localize('setupCopilotButton.setup', "Use AI Features"), `command:workbench.action.chat.triggerSetup`);
-const CopilotCompleteButton = Button(localize('setupCopilotButton.chatWithCopilot', "Start to Chat"), 'command:workbench.action.chat.open');
-
-function createCopilotSetupStep(id: string, button: string, when: string, includeTerms: boolean): BuiltinGettingStartedStep {
-	const description = includeTerms ?
-		`${CopilotDescription}\n${CopilotTermsString}\n${button}` :
-		`${CopilotDescription}\n${button}`;
-
-	return {
-		id,
-		title: CopilotStepTitle,
-		description,
-		when: `${when}`,
-		media: {
-			type: 'svg', altText: 'SideX Copilot multi file edits', path: 'multi-file-edits.svg'
-		},
-	};
-}
 
 export const walkthroughs: GettingStartedWalkthroughContent = [
 	{

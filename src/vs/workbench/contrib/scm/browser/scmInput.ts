@@ -68,7 +68,7 @@ import { observableConfigValue } from '../../../../platform/observable/common/pl
 import { AccessibilityVerbositySettingId } from '../../accessibility/browser/accessibilityConfiguration.js';
 import { IAccessibilityService } from '../../../../platform/accessibility/common/accessibility.js';
 import { AccessibilityCommandId } from '../../accessibility/common/accessibilityCommands.js';
-import product from '../../../../platform/product/common/product.js';
+
 
 export const SCMInputContextKeys = {
 	SCMInputHasValidationMessage: new RawContextKey<boolean>('scmInputHasValidationMessage', false),
@@ -126,9 +126,7 @@ class SCMInputWidgetActionRunner extends ActionRunner {
 
 			// Save last action
 			if (this._runningActions.size === 0) {
-				const actionId = action.id === SCMInputWidgetCommandId.SetupAction
-					? product.defaultChatAgent?.generateCommitMessageCommand ?? action.id
-					: action.id;
+				const actionId = action.id;
 				this.storageService.store(SCMInputWidgetStorageKey.LastActionId, actionId, StorageScope.PROFILE, StorageTarget.USER);
 			}
 		}

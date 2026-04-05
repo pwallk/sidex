@@ -715,11 +715,11 @@ export function createApiFactoryAndRegisterActors(accessor: ServicesAccessor): I
 			},
 			get inlineCompletionsUnificationState() {
 				checkProposedApiEnabled(extension, 'inlineCompletionsAdditions');
-				return extHostLanguageFeatures.inlineCompletionsUnificationState;
+				return undefined;
 			},
-			onDidChangeCompletionsUnificationState(listener, thisArg?, disposables?) {
+			onDidChangeCompletionsUnificationState(listener: any, thisArg?: any, disposables?: any) {
 				checkProposedApiEnabled(extension, 'inlineCompletionsAdditions');
-				return _asExtensionEvent(extHostLanguageFeatures.onDidChangeInlineCompletionsUnificationState)(listener, thisArg, disposables);
+				return { dispose() { } };
 			},
 			registerDocumentLinkProvider(selector: vscode.DocumentSelector, provider: vscode.DocumentLinkProvider): vscode.Disposable {
 				return extHostLanguageFeatures.registerDocumentLinkProvider(extension, checkSelector(selector), provider);
